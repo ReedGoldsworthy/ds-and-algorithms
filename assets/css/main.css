@@ -2052,22 +2052,41 @@ input, select, textarea {
 		}
 
 		/* First Section: Title and Image side by side */
-.website-title {
-    display: flex; /* Aligns items side by side */
-    align-items: center; /* Vertically centers the image with the title */
-    justify-content: center; /* Centers the entire block horizontally */
-    margin-bottom: 20px;
-}
-
-.website-title h1 {
-    margin-right: 10px; /* Adds space between the title and the image */
-    margin-bottom: 0; /* Removes bottom margin for the title */
-}
-
-.website-title img {
-    width: 30%; /* Example size for the logo, adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-}
+		.website-title {
+			display: flex; /* Aligns the text content and image side by side */
+			align-items: center; /* Vertically centers the image and text */
+			justify-content: space-between; /* Ensures the text is on the left and the image on the right */
+			margin-bottom: 2vh; /* Adjust bottom margin relative to viewport height */
+			flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+			padding: 0 2vw; /* Adds padding relative to viewport width */
+		}
+		
+		.text-content {
+			flex: 1; /* Takes up 50% of the width */
+			padding-right: 2vw; /* Adds spacing between the text and the image */
+		}
+		
+		.text-content h1 {
+			font-size: 5vw; /* Adjusts font size relative to viewport width */
+			margin-bottom: 1vh; /* Adds a small margin below the h1 */
+			text-align: left; /* Aligns the text to the left */
+			color: #2e266d;
+		}
+		
+		.text-content p {
+			font-size: 2.5vw; /* Adjusts font size for the paragraph */
+			margin-top: 0; /* Removes top margin for the paragraph */
+			text-align: left; /* Aligns the text to the left */
+			
+		}
+		
+		.website-title img {
+			flex: 1; /* Takes up 50% of the width */
+			max-width: 45%; /* Ensures the image doesn't get too large on wide screens */
+			height: auto; /* Maintain aspect ratio */
+		}
+		
+		
 
 .description-section p {
     text-align: center; /* Center-aligns the text */
