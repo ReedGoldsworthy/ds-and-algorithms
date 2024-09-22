@@ -44,15 +44,6 @@ frontButton.onclick = function () {
   let textInputValue = document.getElementById("notes").value;
   let n = hashStringToSingleNote(textInputValue);
 
-  // // If no radio button is selected, use the text input value
-  // if (n === "") {
-  //   if (textInputValue === "") {
-  //     console.log("You forgot to add some data to your node");
-  //   } else {
-  //     n = textInputValue; // Use the text input value
-  //   }
-  // }
-
   // Add node to the front of the list if a value is provided
   if (n !== "") {
     myList.addFront(n.toString()); // Adds the node value to the linked list

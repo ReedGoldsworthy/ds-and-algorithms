@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive p5.js Sketch with Sliders</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> <!-- Include p5.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js" type="text/javascript"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden; /* Prevent scrollbars from appearing */
+    }
+
+    #container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    #sketch-container {
+      flex: 3;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    #sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #f0f0f0;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .slider-container {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .radio-inline {
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+      }
+
+      #sketch-container {
+        height: 50vh;
+        flex: none;
+      }
+
+      #sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .slider-container {
+        width: auto;
+        margin: 10px;
+      }
+
+      button {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="sketch-container"></div>
+    
+    <div id="sidebar">
+      <h1>Binary Search Tree Visualizer</h1>
+
+      <label class="radio-inline">
+        <label for="index">Node Value:</label>
+        <input type="text" id="notes" placeholder="Enter node value">
+        <br><br>
+        <br>
+      </label>
+      
+      
+      <button id="addFront">Add Node</button>
+      
+    
+      <button id="removeNode">Remove Node</button>
+      <br>
+      <button id="play">Play PreOrder Traversal</button>
+    </div>
+  </div>
+  
+  <script src="Node.js"></script>
+  <script src="BinaryTree.js"></script>
+  <script src="sketch.js"></script>
+  
+</body>
+</html>
