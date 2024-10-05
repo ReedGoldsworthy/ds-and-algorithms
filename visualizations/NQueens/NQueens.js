@@ -60,7 +60,7 @@ class NQueens {
     };
 
     placeQueens(board, 0);
-    return this.solutions.length;
+    return this.solutions;
   }
 
   display() {

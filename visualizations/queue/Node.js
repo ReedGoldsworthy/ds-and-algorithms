@@ -2,7 +2,7 @@ class Node {
   constructor(data) {
     this.data = data;
     this.next = null;
-    this.x = 200;
+    this.x = 100;
     this.y = 25;
     this.size = 50;
     this.stroke = 0;
@@ -156,7 +156,7 @@ class Node {
     fill(255); // Set the text fill to white for contrast
     textAlign(CENTER);
     text(
-      "Top",
+      "First Element In",
       this.x + this.size * 0.5, // Centered horizontally below the square
       this.y + this.size + 80 // Positioned below the arrow
     );

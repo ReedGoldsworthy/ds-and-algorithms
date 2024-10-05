@@ -103,32 +103,29 @@
     <div id="sketch-container"></div>
     
     <div id="sidebar">
-      <h1>N Queens Algorithm</h1>
-   
-      <label for="index">Board Size:</label>
-      <span id="result">2 x 2</span> <!-- Updated to show default size -->
+      <h1>Queue Visualizer</h1>
 
-      <label for="index">Number of Solutions:</label>
-      <span id="solutions"></span> <!-- Updated to show default size -->
-
-
-<br>
-
-<input type="range" id="index" min="4" max="12" value="4">
-<br><br>
-
+      <label class="radio-inline">
+        <label for="index">Node Value:</label>
+        <input type="text" id="notes" placeholder="Enter node value">
+        <br><br>
+        <br>
+      </label>
       
       
-   
-      <button id="play">Click me to visualize a solution</button>
-      <!-- <button id="play">Find Solutions</button> -->
-
+     
+    
       
+      <button id="addFront">Push Element</button>
+      <br>
+      <button id="removeNode">Pop Element</button>
+
     </div>
   </div>
-
+  
+  <script src="Node.js"></script>
+  <script src="Llist.js"></script>
   <script src="sketch.js"></script>
-  <script src="NQueens.js"></script>
   
 </body>
 </html>

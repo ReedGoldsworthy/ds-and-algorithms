@@ -43,9 +43,19 @@ class Llist {
     }
 
     // Start with the front node
-    this.front = this.front.getNext();
+    let newTail = this.front;
+    let curr = this.front.getNext();
 
     // Traverse the list until we find the second-to-last node
+    while (curr.getNext()) {
+      newTail = curr;
+      curr = curr.getNext();
+    }
+
+    // Update the tail to the second-to-last node
+    this.tail = newTail;
+    this.tail.setNext(null); // Ensure the new tail points to null
+    console.log("New tail is", this.tail.data);
 
     // Decrease the size of the list
     this.size--;
@@ -85,7 +95,7 @@ class Llist {
     let current = this.front;
     for (let i = 0; i < this.size; i++) {
       current.display();
-      if (current == this.front) {
+      if (current == this.tail) {
         current.displayTop();
       }
       if (mouseIsPressed) {
